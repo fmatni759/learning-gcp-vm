@@ -28,6 +28,8 @@ resource "google_compute_instance" "vm" {
 
   metadata = {
     environment = var.environment
+    managed-by  = "terraform"
+    owner       = "fadi"
   }
 
   tags = ["vm-exercise", var.environment]
